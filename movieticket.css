@@ -1,0 +1,43 @@
+body {
+    background-color: black
+; /* Light gray background */
+    padding: 20px; /* Add some padding around the content */
+  }
+  
+  img {
+  width: 300px;  /* Scales the width to exactly 300px */
+  height: auto;  /* Automatically adjusts height proportionally */
+  place-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  width: 20%;
+  height: 20%;
+}
+
+h1 {
+    text-align: center;
+    color:red;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ .flash-red {
+            /* Smoothly animate over 0.5 seconds, repeat continuously */
+            animation: redFlash 0.5s infinite alternate;
+        }
+
+        @keyframes redFlash {
+            0% {
+                /* Normal image state */
+                filter: drop-shadow(0 0 0px rgba(255, 0, 0, 0));
+            }
+            100% {
+                /* Intense red glow overlay effect */
+                filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1)) sepia(1) saturate(10) hue-rotate(-50deg);
+            }
+        }

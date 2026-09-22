@@ -1,0 +1,18 @@
+
+html, body {
+  height: 100%;       /* Ensures the body takes up the full screen height */
+  margin: 0;          /* Removes default browser margins */
+  display: grid;      /* Activates grid layout */
+  place-items: center; /* Centers content both horizontally and vertically */
+  background-color: black;
+  text-align: center;
+   margin: 0;
+  overflow: hidden;
+}
+
+a {
+   color: white;
+  text-decoration: none; /* Removes the default underline */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 200px;
+}

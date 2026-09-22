@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: maroon; /* Initial Page Background: White */
+  transition: background-color 0.4s ease; /* Smooth background fade */
+}
+
+/* 2. Image Container & Stack Setup */
+.image-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  cursor: pointer;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease; /* Smooth image fade transition */
+}
+
+/* Initially hide the secondary image */
+.img-hover {
+  opacity: 0;
+}
+
+
+/* ==========================================
+   3. SIMULTANEOUS HOVER EFFECTS 
+   ========================================== */
+
+/* Change the image state when hovering over the container */
+.image-container:hover .img-default {
+  opacity: 0;
+}
+.image-container:hover .img-hover {
+  opacity: 1;
+}
+
+/* Magic Step: Change the HTML body background when the container is hovered */
+body:has(.image-container:hover) {
+  background-color: black; /* New Page Background: Dark Gray */
+}

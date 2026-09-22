@@ -1,0 +1,91 @@
+body {
+    background-color: black
+; /* Light gray background */
+    padding: 20px; /* Add some padding around the content */
+     margin: 50;
+  display: flex;
+  justify-content: center; /* Horizontally centers the container */
+  align-items: center;     /* Vertically centers the container */
+  min-height: 100vh;       /* Forces body to take full screen height */
+  gap:20px;
+  }
+
+  
+  
+  .flash-container {
+            position: relative;
+            display: inline-block;
+            width: 300px; /* Adjust to your image size */
+            height: auto;
+            place-content:center;
+        }
+
+        .flash-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+
+        }
+
+        /* The red overlay that creates the flashing effect */
+        .flash-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.5); /* Red with 50% transparency */
+            pointer-events: none; /* Allows users to click the image underneath */
+            
+            /* Animation properties */
+            animation: flashRed 0.5s ease-in-out;
+            animation-iteration-count: 5; /* 0.5s * 10 iterations = exactly 5 seconds */
+            animation-fill-mode: forwards; /* Keeps the overlay invisible after it finishes */
+            opacity: 0; 
+        }
+
+        /* Definition of the flashing sequence */
+        @keyframes flashRed {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+
+
+        .delayed-text {
+  /* Start completely invisible */
+  opacity: 0; 
+  
+  /* Name of animation, total duration, and timing function */
+  animation: fadeIn 0.5s ease-in;
+  
+  /* Wait exactly 5 seconds before starting the animation */
+  animation-delay: 3s;
+  
+  /* Crucial: Keeps the text visible (opacity: 1) after the animation ends */
+  animation-fill-mode: forwards; 
+
+  color: white;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-size:30px;
+}
+
+/* Define the change from hidden to visible */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a{
+    color: inherit;            /* Takes the color of the surrounding text */
+    text-decoration: none;     /* Removes the default underline */
+    cursor: pointer; 
+}
+
