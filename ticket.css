@@ -1,0 +1,58 @@
+body {
+    background-color: black
+; /* Light gray background */
+    padding: 20px; /* Add some padding around the content */
+      font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black
+}
+  
+
+img {
+  width: 300px;  /* Scales the width to exactly 300px */
+  height: auto;  /* Automatically adjusts height proportionally */
+  place-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  width: 20%;
+  height: 20%;
+}
+
+
+.speech-bubble {
+  position: relative;          /* Critical: anchors the tail absolute positioning */
+  background: white;        /* Bubble background color */
+  color: black;                /* Text color */
+  padding: 15px 20px;         /* Space around the text */
+  border-radius: 12px;        /* Creates the rounded card look */
+  max-width: 300px;           /* Prevents it from stretching infinitely */
+  font-family: sans-serif;
+  line-height: 1.4;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  width: 50%;
+  height: 50%;
+}
+
+/* The triangular tail */
+.speech-bubble::after {
+  content: "";                /* Generates the pseudo-element container */
+  position: absolute;         /* Places the tail relative to the bubble */
+  
+  /* Positions the tail at the bottom center of the bubble */
+  bottom: -15px;              /* Moves the tail below the bottom edge */
+  left: 15%;                  /* Centers the tail horizontally */
+  transform: translateX(-50%); /* Perfectly balances the center alignment */
+  
+  /* The Border Triangle Trick */
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;  /* Left invisible slope */
+  border-right: 15px solid transparent; /* Right invisible slope */
+  border-top: 15px solid white;       /* Match your bubble color */
+}

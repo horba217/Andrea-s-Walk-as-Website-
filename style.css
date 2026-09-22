@@ -1,0 +1,16 @@
+   
+
+body {
+    background-color: black
+; /* Light gray background */
+    padding: 20px; /* Add some padding around the content */
+  }
+
+ img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  width: 50%;
+  height: 50%;
+}
